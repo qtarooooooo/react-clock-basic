@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### no warantee - works on ubuntu 18.04 LTS
+### no warranty - works on ubuntu 18.04 LTS
 ### @jaydestro
 
 # install npm
@@ -9,15 +9,18 @@
 add-apt-repository universe
 apt-get update -y
 apt-get install nodejs npm build-essential git -y 
-
-
-
+parted /dev/sdc --script mklabel gpt mkpart xfspart xfs 0% 100%
+mkfs.xfs /dev/sdc1
+sudo partprobe /dev/sdc1
+mkdir /react-clock-basic 
+mount /dev/sdc1 /react-clock-basic 
+cd /react-clock-basic
 ### installation
+
 
 
 echo "Downloading Repo"
 
-  mkdir /react-clock-basic 
   git clone https://github.com/jaydestro/react-clock-basic.git /react-clock-basic 
   cd /react-clock-basic 
   npm install 
