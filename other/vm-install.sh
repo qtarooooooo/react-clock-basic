@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### no warantee - works on ubuntu 18.04 LTS
+### no warranty - works on ubuntu 18.04 LTS
 ### @jaydestro
 
 # install npm
