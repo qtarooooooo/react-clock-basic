@@ -8,7 +8,7 @@
 ### repositories 
 add-apt-repository universe
 apt-get update -y
-apt-get install nodejs npm build-essential git -y 
+apt-get install nodejs npm build-essential git sudo stress-ng -y 
 
 
 
